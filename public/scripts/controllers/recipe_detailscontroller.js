@@ -37,6 +37,7 @@ angular.module("app")
     $scope.saveRecepie = function () {
     if($scope.recipe._id) {
     dataService.updateRecipe($scope.recipe);
+    console.log($scope.recipe);
     } else {
     dataService.addRecipe($scope.recipe);        
     }
@@ -54,7 +55,9 @@ angular.module("app")
     
       //get categories from API for category dropdown
     dataService.categories(function (response) {
-    $scope.categories = response.data;    
+    $scope.categories = response.data;
+    console.log($scope.categories);
+    
     });    
     
     //get ingrediets from API for Ingredients dropdown
