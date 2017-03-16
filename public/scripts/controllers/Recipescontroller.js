@@ -39,7 +39,7 @@ angular.module("app")
     $scope.deleteRecipeById = function(recipe, index){
     var id = recipe._id;
     dataService.deleteRecipeById(id);
-    $scope.recipes.splice($index, 1);
+    $scope.recipes.splice(index, 1);
     };
         
     
