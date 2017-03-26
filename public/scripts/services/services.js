@@ -12,7 +12,6 @@ angular.module("app")
     this.recipes = function (callback) { $http.get('/api/recipes').then(callback);
     }; 
     
-
     //get the categories
     this.categories = function (callback) {
     $http.get("/api/categories").then(callback);    
