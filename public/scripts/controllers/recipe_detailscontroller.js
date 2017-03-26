@@ -15,7 +15,6 @@ angular.module("app")
         ingredients: [],
               steps: []
     }
-    
     $scope.errors = [];        
     $scope.categories = [];
     $scope.foodItems = [];
@@ -56,13 +55,14 @@ angular.module("app")
       //get categories from API for category dropdown
     dataService.categories(function (response) {
     $scope.categories = response.data;
-    console.log($scope.categories);
     
     });    
     
     //get ingrediets from API for Ingredients dropdown
     dataService.fooditems(function (response) {
     $scope.foodItems = response.data; 
+    console.log($scope.foodItems);
+    
     });
     
     //Delete recipe ingredient from the API when the user clicks Delete
